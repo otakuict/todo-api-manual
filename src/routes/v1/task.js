@@ -3,7 +3,6 @@ import express from "express";
 import { v4 as uuidv4 } from "uuid";
 import * as itemServices from "../../services/task.js";
 export const router = express.Router();
-let storage = [];
 
 router.get("/", getItemLists);
 router.get("/:id", getItemById);
