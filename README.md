@@ -25,7 +25,7 @@ Create .env file at root directory
 example 
 
 ```bash
-JWT_SECRET=super_secret_jwt_key
+TOKEN_SECRET=super_secret_jwt_key
 USERNAME=user
 PASSWORD=password
 
