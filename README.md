@@ -112,7 +112,7 @@ Example Reponse
 #### Update Task
 
 ```api
-  PUT /api/v1/task
+  PUT /api/v1/task/:id
 ```
 
 Example Request body

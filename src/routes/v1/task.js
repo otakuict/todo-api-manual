@@ -8,7 +8,7 @@ let storage = [];
 router.get("/", getItemLists);
 router.get("/:id", getItemById);
 router.post("/", createItem);
-router.put("/", updateItem);
+router.put("/:id", updateItem);
 router.delete("/:id", deleteItem);
 
 export async function getItemLists(req, res, next) {
@@ -64,8 +64,8 @@ export async function updateItem(req, res, next) {
     if (!req.body) {
       res.status(400).json({ message: "body is required!" });
     }
-
-    const { id, name, desc } = req.body;
+    const { id } = req.params;
+    const { name, desc } = req.body;
 
     //validate body
     if (!id) {
@@ -84,7 +84,6 @@ export async function deleteItem(req, res, next) {
   try {
     const { id } = req.params;
 
-    //validate body
     if (!id) {
       res.status(400).json({ message: "id is required!" });
     }
