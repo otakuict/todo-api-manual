@@ -26,7 +26,7 @@ example
 
 ```bash
 TOKEN_SECRET=super_secret_jwt_key
-USERNAME=user
+TODO_USERNAME=username
 PASSWORD=password
 
 
