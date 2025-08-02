@@ -119,7 +119,6 @@ Example Request body
 
 ```res
 {
-    "id": "a124c2bd-268a-4883-bf11-826b5c84f756",
     "name": "learn golang code",
     "desc": "right now!!!!!!!"
 }
