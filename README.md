@@ -159,3 +159,9 @@ Example Reponse
 ```bash
   npm run start:dev
 ```
+
+## Run application (without nodemon)
+
+```bash
+  npm  start
+```
