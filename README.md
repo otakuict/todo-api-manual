@@ -40,10 +40,16 @@ Install todo-api-manual with npm
 
 ```
 
+## Run application (with nodemon)
+
+```bash
+  npm run start:dev
+```
+
 ## Run application (without nodemon)
 
 ```bash
-  npm start
+  npm  start
 ```
 
 ## API Reference
@@ -219,14 +225,4 @@ Example Reponse
 }
 ```
 
-## Run application (with nodemon)
 
-```bash
-  npm run start:dev
-```
-
-## Run application (without nodemon)
-
-```bash
-  npm  start
-```
