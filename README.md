@@ -47,6 +47,31 @@ Install todo-api-manual with npm
 ```
 
 ## API Reference
+#### Login Get Token
+
+```api
+  GET /authorization/login
+```
+```
+curl --location 'http://localhost:3000/authorization/login' \
+--header 'Content-Type: application/json' \
+--data '{
+    "username": <username>,
+    "password": <password>
+}'
+```
+Example Reponse
+
+```res
+
+{
+    "token": <token>
+}
+```
+
+
+
+
 
 #### Get all Tasks
 
