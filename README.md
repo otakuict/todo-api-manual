@@ -97,12 +97,15 @@ Example Reponse
         {
             "id": "cca6f433-ed4e-4f73-b29a-d1571245012e",
             "name": "learn ts code",
-            "desc": "before dinner"
+            "desc": "before dinner",
+             "isDone": true
+
         },
         {
             "id": "dc1639d8-9c46-484b-9cf6-b1c67890e098",
             "name": "learn golang code",
-            "desc": "tomorrow"
+            "desc": "tomorrow",
+            "isDone": true
         }
     ]
 }
@@ -126,7 +129,8 @@ Example Reponse
     "data": {
         "id": "dc1639d8-9c46-484b-9cf6-b1c67890e098",
         "name": "learn golang code",
-        "desc": "tomorrow"
+        "desc": "tomorrow",
+        "isDone": true
     }
 }
 ```
@@ -143,7 +147,8 @@ Example Request body
 
  {
 "name":"learn golang code",
-"desc":"tomorrow"
+"desc":"tomorrow",
+"isDone": false
 }
 ```
 ```
@@ -152,7 +157,8 @@ curl --location 'http://localhost:3000/api/v1/task' \
 --header 'Authorization: Bearer <token>' \
 --data ' {
 "name":"learn golang code",
-"desc":"tomorrow"
+"desc":"tomorrow",
+"isDone": false
 }'
 ```
 
@@ -163,7 +169,8 @@ Example Reponse
 {
     "id": "dc1639d8-9c46-484b-9cf6-b1c67890e098",
     "name": "learn golang code",
-    "desc": "tomorrow"
+    "desc": "tomorrow",
+    "isDone": false
 }
 ```
 
@@ -178,7 +185,8 @@ Example Request body
 ```res
 {
     "name": "learn golang code",
-    "desc": "right now!!!!!!!"
+    "desc": "right now!!!!!!!",
+     "isDone": false
 }
 ```
 ```
@@ -187,7 +195,8 @@ curl --location --request PUT 'http://localhost:3000/api/v1/task/:id' \
 --header 'Authorization: Bearer <tiken>' \
 --data '{
     "name": "learn golang code",
-    "desc": "right now!!!!!!!"
+    "desc": "right now!!!!!!!",
+     "isDone": true
 }'
 ```
 Example Reponse
@@ -198,7 +207,8 @@ Example Reponse
     "data": {
         "id": "ba30139a-b520-401e-8dad-fd9615b94e97",
         "name": "learn golang code",
-        "desc": "right now!!!!!!!"
+        "desc": "right now!!!!!!!",
+         "isDone": true
     }
 }
 ```
@@ -211,11 +221,7 @@ Example Reponse
 ```
 curl --location --request DELETE 'http://localhost:3000/api/v1/task/:id' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer <token>' \
---data '{
-    "name": "learn golang code",
-    "desc": "right now!!!!!!!"
-}'
+--header 'Authorization: Bearer <token>'
 ```
 Example Reponse
 
