@@ -34,12 +34,13 @@ export function createItemService(id, body) {
   return body;
 }
 
-export function updateItemService({ id, name, desc }) {
+export function updateItemService({ id, name, desc, isDone }) {
   const foundItem = findItem(id)?.data;
   //update
   if (foundItem) {
     name ? (foundItem.name = name) : foundItem.name;
     desc ? (foundItem.desc = desc) : foundItem.desc;
+    isDone ? (foundItem.isDone = isDone) : foundItem.isDone;
   }
 
   return foundItem;

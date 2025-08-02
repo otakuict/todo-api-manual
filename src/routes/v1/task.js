@@ -64,13 +64,13 @@ export async function updateItem(req, res, next) {
       res.status(400).json({ message: "body is required!" });
     }
     const { id } = req.params;
-    const { name, desc } = req.body;
+    const { name, desc, isDone } = req.body;
 
     //validate body
     if (!id) {
       res.status(400).json({ message: "id is required!" });
     }
-    const updated = itemServices.updateItemService({ id, name, desc });
+    const updated = itemServices.updateItemService({ id, name, desc, isDone });
 
     res.status(200).json({ message: "updated", data: updated });
   } catch (e) {
