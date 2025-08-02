@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 
 export function generateAccessToken(username, password) {
   const userStorage = {
-    username: process.env.USERNAME,
+    username: process.env.TODO_USERNAME,
     password: process.env.PASSWORD,
   };
 
@@ -13,3 +13,4 @@ export function generateAccessToken(username, password) {
   }
   return null;
 }
+//
