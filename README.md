@@ -10,6 +10,7 @@
 -ตัว data stucture หลักจะทำเป็น array object เพราะเข้าใจง่าย ใช้งานง่าย</br></br>
 -logic ในการทำจะทำ function findUser ที่ทำหน้าที่หา task ใน storage แยกไว้เป็น function เรียกใช้งาน เนื่องจากประเมินแล้วว่า หลาย function ต้องเรียกใช้งานบ่อย </br></br>
 -handle errors
+-เพิ่ม jwt middleware และ env ที่กี่ยวข้อง  โดย username และ password นั้น จะใช้ plain text โดยจะละการเข้ารหัสไว้ในฐานที่เข้าใจเพื่อความง่ายในการใช้งาน 
 
 ## Installation
 
@@ -17,6 +18,17 @@ enter directory todo-api-manual ( if not)
 
 ```bash
   cd todo-api-manual
+
+
+```
+Create .env file at root directory 
+example 
+
+```bash
+JWT_SECRET=super_secret_jwt_key
+AUTH_USER=user
+AUTH_PASS=password
+
 
 
 ```
@@ -41,7 +53,10 @@ Install todo-api-manual with npm
 ```api
   GET /api/v1/task
 ```
-
+```
+curl --location 'http://localhost:3000/api/v1/task' \
+--header 'Authorization: Bearer <token>'
+```
 Example Reponse
 
 ```res
@@ -67,6 +82,10 @@ Example Reponse
 ```api
   GET /api/v1/task/:id
 ```
+```
+curl --location 'http://localhost:3000/api/v1/task/:id' \
+--header 'Authorization: Bearer <token>'
+```
 
 Example Reponse
 
@@ -89,13 +108,21 @@ Example Reponse
 
 Example Request body
 
-```res
-
+```
 
  {
 "name":"learn golang code",
 "desc":"tomorrow"
 }
+```
+```
+curl --location 'http://localhost:3000/api/v1/task' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <token>' \
+--data ' {
+"name":"learn golang code",
+"desc":"tomorrow"
+}'
 ```
 
 Example Reponse
@@ -123,14 +150,22 @@ Example Request body
     "desc": "right now!!!!!!!"
 }
 ```
-
+```
+curl --location --request PUT 'http://localhost:3000/api/v1/task/:id' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <tiken>' \
+--data '{
+    "name": "learn golang code",
+    "desc": "right now!!!!!!!"
+}'
+```
 Example Reponse
 
 ```res
 {
     "message": "updated",
     "data": {
-        "id": "a124c2bd-268a-4883-bf11-826b5c84f756",
+        "id": "ba30139a-b520-401e-8dad-fd9615b94e97",
         "name": "learn golang code",
         "desc": "right now!!!!!!!"
     }
@@ -142,7 +177,15 @@ Example Reponse
 ```api
   DELETE /api/v1/task/:id
 ```
-
+```
+curl --location --request DELETE 'http://localhost:3000/api/v1/task/:id' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer <token>' \
+--data '{
+    "name": "learn golang code",
+    "desc": "right now!!!!!!!"
+}'
+```
 Example Reponse
 
 ```res
