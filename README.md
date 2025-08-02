@@ -25,9 +25,9 @@ Create .env file at root directory
 example 
 
 ```bash
-JWT_SECRET=super_secret_jwt_key
-AUTH_USER=user
-AUTH_PASS=password
+TOKEN_SECRET=super_secret_jwt_key
+USERNAME=user
+PASSWORD=password
 
 
 
@@ -40,10 +40,16 @@ Install todo-api-manual with npm
 
 ```
 
+## Run application (with nodemon)
+
+```bash
+  npm run start:dev
+```
+
 ## Run application (without nodemon)
 
 ```bash
-  npm start
+  npm  start
 ```
 
 ## API Reference
@@ -219,14 +225,4 @@ Example Reponse
 }
 ```
 
-## Run application (with nodemon)
 
-```bash
-  npm run start:dev
-```
-
-## Run application (without nodemon)
-
-```bash
-  npm  start
-```
