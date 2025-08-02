@@ -26,8 +26,8 @@ example
 
 ```bash
 JWT_SECRET=super_secret_jwt_key
-AUTH_USER=user
-AUTH_PASS=password
+USERNAME=user
+PASSWORD=password
 
 
 
