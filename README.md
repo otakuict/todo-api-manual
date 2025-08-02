@@ -9,7 +9,7 @@
 -เริ่มคิดเกี่ยวกับ lib ที่ต้องใช้นอกจากตัว express ซึ่งจะใช้ uuid ในการจำลอง unique key เป็น id และ nodemon เพิ่มความสะดวกในการ develop </br></br>
 -ตัว data stucture หลักจะทำเป็น array object เพราะเข้าใจง่าย ใช้งานง่าย</br></br>
 -logic ในการทำจะทำ function findUser ที่ทำหน้าที่หา task ใน storage แยกไว้เป็น function เรียกใช้งาน เนื่องจากประเมินแล้วว่า หลาย function ต้องเรียกใช้งานบ่อย </br></br>
--handle errors
+-handle errors </br></br>
 -เพิ่ม jwt middleware และ env ที่กี่ยวข้อง  โดย username และ password นั้น จะใช้ plain text โดยจะละการเข้ารหัสไว้ในฐานที่เข้าใจเพื่อความง่ายในการใช้งาน 
 
 ## Installation
