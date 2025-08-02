@@ -13,7 +13,10 @@
 -เพิ่ม jwt middleware และ env ที่กี่ยวข้อง  โดย username และ password นั้น จะใช้ plain text โดยจะละการเข้ารหัสไว้ในฐานที่เข้าใจเพื่อความง่ายในการใช้งาน 
 
 ## Installation
-
+Clone project
+```
+git clone https://github.com/otakuict/todo-api-manual.git
+```
 enter directory todo-api-manual ( if not)
 
 ```bash
