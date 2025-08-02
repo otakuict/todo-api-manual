@@ -49,16 +49,14 @@ Example Reponse
 {
     "data": [
         {
-            "id": "c4bd794c-c77b-498c-8155-843272606cf5",
-            "name": "a Guy",
-            "age": 28,
-            "email": "yourEmail@mail.com"
+            "id": "cca6f433-ed4e-4f73-b29a-d1571245012e",
+            "name": "learn ts code",
+            "desc": "before dinner"
         },
         {
-            "id": "e550a42b-e666-49aa-a87d-f234018a776a",
-            "name": "a Guy2",
-            "age": 20,
-            "email": "yourEmail@mail.com"
+            "id": "dc1639d8-9c46-484b-9cf6-b1c67890e098",
+            "name": "learn golang code",
+            "desc": "tomorrow"
         }
     ]
 }
@@ -74,10 +72,12 @@ Example Reponse
 
 ```res
 
- {
-    "name": "a Guy",
-    "age": 20,
-    "email": "yourEmail@mail.com"
+{
+    "data": {
+        "id": "dc1639d8-9c46-484b-9cf6-b1c67890e098",
+        "name": "learn golang code",
+        "desc": "tomorrow"
+    }
 }
 ```
 
@@ -91,10 +91,10 @@ Example Request body
 
 ```res
 
-{
-    "name": "a Guy3",
-    "age": 20,
-    "email": "yourEmail@mail.com"
+
+ {
+"name":"learn golang code",
+"desc":"tomorrow"
 }
 ```
 
@@ -102,11 +102,10 @@ Example Reponse
 
 ```res
 
- {
-    "id": "e550a42b-e666-49aa-a87d-f234018a776a",
-    "name": "a Guy",
-    "age": 20,
-    "email": "yourEmail@mail.com"
+{
+    "id": "dc1639d8-9c46-484b-9cf6-b1c67890e098",
+    "name": "learn golang code",
+    "desc": "tomorrow"
 }
 ```
 
@@ -120,9 +119,9 @@ Example Request body
 
 ```res
 {
-"id":"793fdd7e-86c3-4cfc-8876-b3c3583bdd1f",
-"name":"mumx1",
-"email":"testmail2"
+    "id": "a124c2bd-268a-4883-bf11-826b5c84f756",
+    "name": "learn golang code",
+    "desc": "right now!!!!!!!"
 }
 ```
 
@@ -132,10 +131,9 @@ Example Reponse
 {
     "message": "updated",
     "data": {
-        "id": "793fdd7e-86c3-4cfc-8876-b3c3583bdd1f",
-        "name": "mumx1",
-        "age": 20,
-        "email": "testmail2"
+        "id": "a124c2bd-268a-4883-bf11-826b5c84f756",
+        "name": "learn golang code",
+        "desc": "right now!!!!!!!"
     }
 }
 ```
